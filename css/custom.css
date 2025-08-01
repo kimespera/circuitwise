@@ -1,0 +1,328 @@
+.main-content {
+	position: relative;
+	z-index: 1;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1192px;
+	padding: 0 16px;
+	width: 100%;
+}
+
+a.button {
+	background-color: #E02335;
+	border: 1px solid #E02335;;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Inter Bold';
+	font-size: 0.875em;
+	font-weight: normal;
+	letter-spacing: 2px;
+	padding: 12px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a.button:hover {
+	background-color: #fff;
+	color: #E02335;
+}
+
+.header {
+	padding: 30px 0 20px;
+	position: relative;
+	z-index: 2;
+}
+
+.header-inner {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main-nav {
+	display: none;
+}
+
+.main-menu {
+	align-items: center;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.main-menu a {
+	color: #2F3643;
+	font-family: 'Inter Bold';
+	font-weight: normal;
+	font-size: 14px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.main-menu a:hover,
+.main-menu li.current-menu-item a {
+	color: #E02335;
+}
+
+.main-menu li.menu-btn a {
+	background-color: #E02335;
+	border: 1px solid #E02335;
+	border-radius: 100px;
+	color: #fff;
+	padding: 10px 30px;
+}
+
+.main-menu li.menu-btn a:hover {
+	background-color: #fff;
+	color: #E02335;
+}
+
+.slicknav_menu {
+	background: none;
+	padding: 0;
+}
+
+.slicknav_btn {
+	margin: 0;
+	overflow: hidden;
+	padding: 12px;
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slicknav_menu .slicknav_icon {
+	width: 20px;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+	width: 100%;
+	position: relative;
+	transition: all ease .3s;
+}
+
+.slicknav_open .slicknav_icon-bar:nth-child(1) {
+	top: 5px;
+	transform: rotate(45deg);
+}
+
+.slicknav_open .slicknav_icon-bar:nth-child(2) {
+	transform: translateX(200%);
+}
+
+.slicknav_open .slicknav_icon-bar:nth-child(3) {
+	top: -5px;
+	transform: rotate(-45deg);
+}
+
+.slicknav_nav {
+	background-color: #22292E;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+}
+
+.slicknav_nav li a {
+	font-size: 16px;
+	margin: 0;
+	padding: 10px;
+}
+
+.slicknav_nav li.current-menu-item a {
+	color: #E02335;
+}
+
+.footer {
+	background-color: #22292E;
+	color: #fff;
+}
+
+.footer-navigation {
+	border-bottom: 1px solid #707070;
+	padding: 70px 0;
+	text-align: center;
+}
+
+.footer-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer-logo,
+.footer-details,
+.footer-nav,
+.footer-social {
+	width: 100%;
+}
+
+.footer-logo {
+	margin-bottom: 30px;
+}
+
+.footer-social {
+	font-size: 18px;
+	text-align: center;
+}
+
+.footer-social a {
+	color: #fff;
+}
+
+.footer-social a:hover {
+	color: #E02335;
+}
+
+.footer-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu li {
+	margin-bottom: .75em;
+}
+
+.footer-menu li a {
+	color: #fff;
+	font-family: 'Inter Bold';
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.footer-menu li a:hover {
+	color: #E02335;
+}
+
+.footer-copyright {
+	color: #83878A;
+	padding: 40px 0 45px;
+}
+
+.footer-copyright .footer-col {
+	display: none;
+}
+
+.copyright {
+	margin-bottom: 10px;
+}
+
+.copyright,
+.policy-links {
+	text-align: center;
+	width: 100%;
+}
+
+.policy-links ul {
+	align-items: center;
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+.policy-links ul li {
+	margin: 0 20px;
+}
+
+.policy-links ul li a {
+	color: #83878A;
+}
+
+@media (min-width:768px) {
+	.footer-navigation {
+		text-align: left;
+	}
+
+	.footer-logo {
+		margin: 0;
+		width: 24%;
+	}
+
+	.footer-details {
+		width: 44%;
+	}
+
+	.footer-nav,
+	.footer-social {
+		width: 14%;
+	}
+
+	.footer-social {
+		text-align: right;
+	}
+}
+
+@media (min-width:1024px) {
+	.main-nav {
+		display: block;
+	}
+
+	.menu-burger {
+		display: none;
+	}
+
+	.main-menu li {
+		padding: 0 15px;
+	}
+
+	.main-menu li.menu-btn {
+		padding-left: 40px;
+		padding-right: 0;
+	}
+
+	.copyright {
+		margin: 0;
+		text-align: left;
+	}
+	
+	.policy-links ul {
+		justify-content: flex-end;
+	}
+
+	.policy-links ul li {
+		margin: 0 52px 0 0;
+	}
+
+	.policy-links ul li:last-child {
+		margin: 0;
+	}
+
+	.copyright {
+		width: 60%;
+	}
+
+	.policy-links {
+		width: 30%;
+	}
+}
+
+@media (min-width:1440px) {
+	.main-menu li {
+		padding: 0 20px;
+	}
+
+	.main-menu li.menu-btn {
+		padding-left: 60px;
+	}
+
+	.footer-copyright .footer-col {
+		display: block;
+		width: 24%;
+	}
+
+	.copyright {
+		width: 44%;
+	}
+
+	.policy-links {
+		width: 28%;
+	}
+}

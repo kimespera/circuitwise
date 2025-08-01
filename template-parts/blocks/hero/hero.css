@@ -1,0 +1,39 @@
+.hero-block {
+	background-color: #22292E;
+	padding-bottom: 60px;
+	padding-top: 60px;
+	position: relative;
+}
+
+.hero-block > img {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	opacity: .3;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.hero-box {
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+.hero-box h1 {
+	color: #fff;
+}
+
+.hero-box h4 {
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+@media (min-width:1024px) {
+	.hero-block {
+		padding-bottom: 130px;
+		padding-top: 180px;
+	}
+}
