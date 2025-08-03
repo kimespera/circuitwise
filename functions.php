@@ -210,7 +210,7 @@ function register_acf_block_types() {
 			'jsx'    => true,
 			'multiple' => false
 		),
-		'keywords'          => array('title', 'headline', 'header'),
+		'keywords'          => array('title', 'headline', 'hero'),
 	));
 
 	// Split Content Block
@@ -229,7 +229,26 @@ function register_acf_block_types() {
 			'mode'   => false,
 			'jsx'    => true
 		),
-		'keywords'          => array('title', 'headline', 'header'),
+		'keywords'          => array('split', 'content', 'half'),
+	));
+
+	// Icon List Block
+	acf_register_block_type(array(
+		'name'              => 'icon-list',
+		'title'             => __('Icon List Block'),
+		'description'       => __('An icon list block.'),
+		'category'          => 'common',
+		'icon'              => 'ellipsis',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/icon-list/icon-list.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/icon-list/icon-list.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('icon', 'list'),
 	));
 }
 
