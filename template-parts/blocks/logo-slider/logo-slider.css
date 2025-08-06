@@ -1,0 +1,24 @@
+.logoslider-block {
+	background-color: #EFEFEF;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.logoslider-block h3 {
+	margin-bottom: 50px;
+}
+
+.slick-slider .slick-track {
+	align-items: center;
+	display: flex;
+}
+
+.slick-slide img {
+	display: inline-flex;
+}
+
+@media (min-width:768px) {
+	.logoslider-block {
+		padding: 70px 0 110px;
+	}
+}

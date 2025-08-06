@@ -1,0 +1,38 @@
+.form-block {
+	background-color: #EFEFEF;
+}
+
+.form-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form-content {
+	padding: 40px 0 0;
+	width: 100%;
+}
+
+.form-content b,
+.form-content strong {
+	color: #E02335;
+}
+
+.form-code {
+	background-color: #22292E;
+	color: #fff;
+	padding: 40px 20px;
+	width: 100%;
+}
+
+@media (min-width:1024px) {
+	.form-content {
+		padding: 110px 0;
+		width: 40%;
+	}
+
+	.form-code {
+		padding: 40px 50px 60px;
+		width: 50%;
+	}
+}

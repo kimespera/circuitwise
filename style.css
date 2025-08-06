@@ -426,7 +426,7 @@ h6 {
 }
 
 h1 {
-	font-size: 42px;
+	font-size: 38px;
 	margin: 0 0 2.25rem 0;
 }
 
@@ -528,6 +528,7 @@ hr {
 ul,
 ol {
 	margin: 0 0 30px 0;
+	padding: 0 0 0 15px;
 }
 
 ul {
@@ -542,6 +543,10 @@ li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: 30px;
+}
+
+ol > li {
+	margin-bottom: 30px;
 }
 
 dt {
@@ -598,35 +603,9 @@ a:active {
 
 /* Forms
 --------------------------------------------- */
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-}
-
-button:active,
-button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+input:focus-visible,
+textarea:focus-visible {
+	outline: none;
 }
 
 input[type="text"],
@@ -646,9 +625,9 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	height: 45px;
 	padding: 3px;
+	width: 100%;
 }
 
 input[type="text"]:focus,
@@ -675,9 +654,41 @@ select {
 }
 
 textarea {
+	height: 200px;
+	padding-top: 10px;
 	width: 100%;
 }
 
+.input-wrap {
+	margin-bottom: 24px;
+	position: relative;
+}
+
+.input-wrap.input-submit {
+	display: flex;
+	flex-direction: row-reverse;
+	margin: 0;
+}
+
+.input-wrap label {
+	color: #676C6F;
+	font-size: 18px;
+	left: 5px;
+	position: absolute;
+	top: 9px;
+	transition: all ease .3s;
+	z-index: 2;
+}
+
+.input-wrap.active label {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.wpcf7-not-valid-tip {
+	font-size: 12px;
+	position: absolute;
+}
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/

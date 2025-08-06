@@ -1,0 +1,101 @@
+.iconlist-block {
+	background-color: #fff;
+	padding: 70px 0 90px;
+}
+
+.iconlist-block.dark {
+	background-color: #22292E;
+}
+
+.iconlist-block.dark .topdesc *,
+.iconlist-block.dark .icon-item *,
+.iconlist-block.dark .botdesc * {
+	color: #fff;
+}
+
+.iconlist-block.dark .topdesc h2 {
+	color: #9AA6B1;
+}
+
+.half-imgcont {
+	background-color: #2D3338;
+	border-radius: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.half-imgcont * {
+	color: #fff;
+}
+
+.half-col {
+	position: relative;
+	width: 100%;
+}
+
+.half-cont {
+	padding: 30px 50px;
+}
+
+.iconlist-block.dark .button:hover {
+	color: #E02335;
+}
+
+.icon-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 20px;
+	padding-top: 60px;
+}
+
+.icon-item {
+	text-align: center;
+	padding: 0 14px;
+	width: 50%;
+}
+
+.icon-img {
+	height: 70px;
+	margin-bottom: 30px;
+}
+
+.icon-img img {
+	max-height: 100%;
+	width: auto;
+}
+
+.botdesc {
+	border-top: 1px solid #95989A;
+	padding-top: 50px;
+}
+
+.iconlist-block.dark .btn-link i {
+	color: #E02335;
+}
+
+@media (min-width:768px) {
+	.icon-item {
+		width: 33%;
+	}
+}
+
+@media (min-width:1024px) {
+	.half-col {
+		width: 50%;
+	}
+
+	.half-img img {
+		height: 100%;
+		left: 0;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.icon-item {
+		width: 20%;
+	}
+}

@@ -1,0 +1,33 @@
+.cta-block {
+	background-color: #EFEFEF;
+	padding: 70px 0 70px;
+	position: relative;
+	text-align: center;
+}
+
+.cta-block > img {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.cta-block h3 {
+	color: #22292E;
+	font-family: 'Inter Regular';
+	margin-bottom: 40px;
+	position: relative;
+	z-index: 2;
+}
+
+.cta-block h3 b {
+	font-family: 'Inter Bold';
+}
+
+.cta-block .button {
+	position: relative;
+	z-index: 2;
+}
