@@ -52,7 +52,8 @@
 					<?php foreach( $icons as $row ):
 						$icon = $row['icon'];
 						$title = $row['title'];
-						$description = $row['description']; ?>
+						$description = $row['description'];
+						$iconlink = $row['link']; ?>
 
 						<div class="icon-item">
 							<?php if($icon): ?>
@@ -65,6 +66,13 @@
 
 							<?php if($description): ?>
 								<p><?php echo $description; ?></p>
+							<?php endif; ?>
+
+							<?php if( $iconlink ): 
+								$iconlink_url = $iconlink['url'];
+								$iconlink_title = $iconlink['title'];
+								$iconlink_target = $iconlink['target'] ? $iconlink['target'] : '_self'; ?>
+								<a class="btn-link" href="<?php echo esc_url( $iconlink_url ); ?>" target="<?php echo esc_attr( $iconlink_target ); ?>"><?php echo esc_html( $iconlink_title ); ?><i class="fa-solid fa-chevron-right"></i></a>
 							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>

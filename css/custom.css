@@ -632,6 +632,62 @@ a.btn-link:hover {
 	font-size: 14px;
 }
 
+.additional-resources {
+	background-color: #22292E;
+	border-bottom: 1px solid #fff;
+	overflow: hidden;
+	padding: 50px 0 80px;
+}
+
+.slider-resources {
+	position: relative;
+}
+
+.slider-resources .slick-track {
+	display: flex;
+}
+
+.slider-resources .resource-item {
+	display: flex;
+	flex-direction: column;
+	height: inherit;
+	margin: 0 8px;
+}
+
+.slider-resources .resource-content {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.slider-resources .resource-content .btn-link {
+	margin-top: auto;
+}
+
+.slick-arrow {
+	align-items: center;
+	background-color: #fff;
+	border-radius: 100%;
+	box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+	color: #E02335;
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	z-index: 2;
+}
+
+.slick-arrow.prevArrow {
+	left: 0;
+}
+
+.slick-arrow.nextArrow {
+	right: 0;
+}
+
 @media (min-width:768px) {
 	.resource-list {
 		grid-template-columns: repeat(3, 1fr);
@@ -668,5 +724,13 @@ a.btn-link:hover {
 @media (min-width:1440px) {
 	.resources-listing {
 		padding-top: 180px;
+	}
+
+	.slick-arrow.prevArrow {
+		left: -100px;
+	}
+
+	.slick-arrow.nextArrow {
+		right: -100px;
 	}
 }

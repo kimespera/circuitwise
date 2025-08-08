@@ -46,14 +46,20 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-bottom: 20px;
 	padding-top: 60px;
 }
 
 .icon-item {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
 	text-align: center;
 	padding: 0 14px;
 	width: 50%;
+}
+
+.icon-item .btn-link {
+	margin-top: auto;
 }
 
 .icon-img {

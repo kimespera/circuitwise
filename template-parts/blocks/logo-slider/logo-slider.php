@@ -1,5 +1,6 @@
 <?php
 	$heading = get_field('heading');
+	$description = get_field('description');
 	$logo_list = get_field('logo_list');
 
 	$anchor_id = $block['anchor'] ?? '';
@@ -17,6 +18,9 @@
 <div class="<?php echo esc_attr($class_name); ?>">
 	<div class="container">
 		<h3><?php echo $heading; ?></h3>
+		<?php if($description): ?>
+			<p><?php echo $description; ?></p>
+		<?php endif; ?>
 
 		<?php if ($logo_list) : ?>
 			<div id="logo-list" class="logo-list">

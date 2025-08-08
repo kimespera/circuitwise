@@ -1,0 +1,34 @@
+.logocards-block {
+	background-color: #EFEFEF;
+	padding: 80px 0;
+}
+
+.logo-cards {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.logo-card-item {
+	background-color: #EFEFEF;
+	border-radius: 20px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+	overflow: hidden;
+}
+
+.logo-card-img {
+	background-color: #fff;
+	padding: 45px 0;
+	text-align: center;
+}
+
+.logo-card-desc {
+	padding: 40px 20px;
+	text-align: center;
+}
+
+@media (min-width:768px) {
+	.logo-cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

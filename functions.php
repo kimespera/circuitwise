@@ -413,6 +413,63 @@ function register_acf_block_types() {
 		),
 		'keywords'          => array('cta', 'button'),
 	));
+
+	// Image Cards Block
+	acf_register_block_type(array(
+		'name'              => 'image-cards',
+		'title'             => __('Image Cards Block'),
+		'description'       => __('An image cards block.'),
+		'category'          => 'common',
+		'icon'              => 'index-card',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/image-cards/image-cards.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/image-cards/image-cards.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('image', 'cards'),
+	));
+
+	// WYSIWYG Block
+	acf_register_block_type(array(
+		'name'              => 'wysiwyg',
+		'title'             => __('WYSIWYG Block'),
+		'description'       => __('A WYSIWYG block.'),
+		'category'          => 'common',
+		'icon'              => 'text',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/wysiwyg/wysiwyg.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/wysiwyg/wysiwyg.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('wysiwyg', 'content', 'text', 'paragraphs'),
+	));
+
+	// Logo Cards Block
+	acf_register_block_type(array(
+		'name'              => 'logo-cards',
+		'title'             => __('Logo Cards Block'),
+		'description'       => __('A logo cards block.'),
+		'category'          => 'common',
+		'icon'              => 'images-alt',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/logo-cards/logo-cards.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/logo-cards/logo-cards.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('logo', 'cards'),
+	));
 }
 
 if ( function_exists('acf_register_block_type') ) {
