@@ -1,0 +1,24 @@
+.products-block {
+	background-color: #fff;
+	padding: 80px 0;
+}
+
+.product-list {
+	display: grid;
+	gap: 16px;
+	grid-template-columns: 1fr;
+}
+
+.product-img {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+	height: 224px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	text-align: center;
+}
+
+@media (min-width:768px) {
+	.product-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

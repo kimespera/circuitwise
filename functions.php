@@ -470,6 +470,44 @@ function register_acf_block_types() {
 		),
 		'keywords'          => array('logo', 'cards'),
 	));
+
+	// Products Block
+	acf_register_block_type(array(
+		'name'              => 'products',
+		'title'             => __('Products Block'),
+		'description'       => __('A products block.'),
+		'category'          => 'common',
+		'icon'              => 'products',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/products/products.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/products/products.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('products'),
+	));
+
+	// Teams Block
+	acf_register_block_type(array(
+		'name'              => 'teams',
+		'title'             => __('Teams Block'),
+		'description'       => __('A teams block.'),
+		'category'          => 'common',
+		'icon'              => 'images-alt2',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/teams/teams.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/teams/teams.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('teams'),
+	));
 }
 
 if ( function_exists('acf_register_block_type') ) {
