@@ -10,6 +10,8 @@
 }
 
 .team-item {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
 }
 
@@ -38,6 +40,10 @@
 	font-family: 'Inter Regular';
 	margin: 0 0 10px 0;
 	text-transform: uppercase;
+}
+
+.team-item > a {
+	margin-top: auto;
 }
 
 @media (min-width:768px) {

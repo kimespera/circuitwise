@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .main-content {
 	position: relative;
 	z-index: 1;
@@ -54,9 +58,33 @@ a.btn-link:hover {
 }
 
 .header {
+	background-color: #fff;
 	padding: 30px 0 20px;
 	position: relative;
 	z-index: 2;
+}
+
+.header.sticky {
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	left: 0	;
+	padding: 10px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.admin-bar .header.sticky {
+	top: 46px;
+}
+
+@media (min-width:783px) {
+	.admin-bar .header.sticky {
+		top: 32px;
+	}
+}
+
+.header.sticky .logo img {
+	width: 200px;
 }
 
 .header-inner {
@@ -103,6 +131,35 @@ a.btn-link:hover {
 .main-menu li.menu-btn a:hover {
 	background-color: #fff;
 	color: #E02335;
+}
+
+.main-menu li {
+	position: relative;
+}
+
+.main-menu li > ul {
+	background-color: #fff;
+	box-shadow: 0 3px 6px rgb(0, 0, 0, 0.2);
+	display: none;
+	left: 0;
+	list-style: none;
+	margin: 0;
+	padding: 20px 0;
+	position: absolute;
+	top: 100%;
+}
+
+.main-menu li > ul li {
+	padding: 0;
+}
+
+.main-menu li > ul li a {
+	display: block;
+	padding: 10px 20px;
+}
+
+.main-menu li:hover > ul {
+	display: block;
 }
 
 .slicknav_menu {
@@ -160,6 +217,37 @@ a.btn-link:hover {
 
 .slicknav_nav li.current-menu-item a {
 	color: #E02335;
+}
+
+.slicknav_nav .slicknav_row {
+	margin: 0;
+	position: relative;
+}
+
+.slicknav_nav .slicknav_row:hover {
+	background: none;
+	border-radius: 0;
+}
+
+.slicknav_nav .slicknav_arrow {
+	font-size: 20px;
+	margin: 0;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all ease .3s;
+}
+
+.slicknav_nav .slicknav_arrow::before {
+	content: "\f0d7";
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
+}
+
+.slicknav_nav .slicknav_open .slicknav_arrow {
+	transform: scaleY(-1);
+	transform-origin: 0 8px;
 }
 
 .footer {
@@ -679,11 +767,11 @@ a.btn-link:hover {
 	transform: translateY(-50%);
 	transition: all ease .3s;
 	width: 50px;
-	z-index: 2;
+	z-index: 3;
 }
 
 .slick-arrow.prevArrow {
-	left: 0;
+left: 0;
 }
 
 .slick-arrow.nextArrow {
@@ -693,6 +781,37 @@ a.btn-link:hover {
 .slick-arrow.slick-disabled {
 	cursor: not-allowed;
 	opacity: .3;
+}
+
+.error404 {
+	background-color: #22292E;
+}
+
+.error404 .site {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+}
+
+.error404.admin-bar .site {
+	height: calc(100vh - 46px);
+}
+
+@media (min-width:783px) {
+	.error404.admin-bar .site {
+		height: calc(100vh - 32px);
+	}
+}
+
+.error-404 {
+	color: #fff;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.error404 .footer {
+	border-top: 2px solid #fff;
 }
 
 @media (min-width:768px) {

@@ -1,60 +1,11 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package circuitwise
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+	<main class="main-content error-404 not-found">
+		<div class="container">
+			<h1>404 Page not found.</h1>
+			<p>The page you're looking for doesn't exist, moved, or the link is incorrect.<br>Return to the homepage to continue exploring. </p>
+			<a class="button" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Back To Homepage</a>
+		</div>
+	</main>
 
-	<main id="primary" class="site-main">
-
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'circuitwise' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'circuitwise' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'circuitwise' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$circuitwise_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'circuitwise' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$circuitwise_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
-		</section><!-- .error-404 -->
-
-	</main><!-- #main -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

@@ -12,7 +12,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-	<header class="header">
+	<header id="header" class="header">
 		<div id="menu-burger" class="menu-burger"></div>
 		<div class="header-inner container">
 			<div class="logo">
