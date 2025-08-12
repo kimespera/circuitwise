@@ -508,6 +508,25 @@ function register_acf_block_types() {
 		),
 		'keywords'          => array('teams'),
 	));
+
+	// Timeline Block
+	acf_register_block_type(array(
+		'name'              => 'timeline',
+		'title'             => __('Timeline Block'),
+		'description'       => __('A timeline block.'),
+		'category'          => 'common',
+		'icon'              => 'calendar',
+		'mode'              => 'edit',
+		'render_template'   => get_template_directory() . '/template-parts/blocks/timeline/timeline.php',
+		'enqueue_style'     => get_template_directory_uri() . '/template-parts/blocks/timeline/timeline.css',
+		'supports'          => array(
+			'align'  => true,
+			'anchor' => true,
+			'mode'   => false,
+			'jsx'    => true
+		),
+		'keywords'          => array('timeline', 'history'),
+	));
 }
 
 if ( function_exists('acf_register_block_type') ) {

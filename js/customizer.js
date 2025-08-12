@@ -95,4 +95,53 @@
 		]
 	});
 
+	$('#timeline-list').slick({
+		infinite: false,
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		nextArrow: '<span class="nextArrow"><i class="fa-solid fa-chevron-right"></i></span>',
+		prevArrow: '<span class="prevArrow"><i class="fa-solid fa-chevron-left"></i></span>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 5
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 3
+				}
+			}
+		]
+	});
+
+	function equalizeItemBoxHeights() {
+		$('#timeline-list .timeline-item').each(function() {
+			var tallest = 0;
+			var boxes = $(this).find('.item-box');
+
+			// Reset height first (important when recalculating)
+			boxes.css('min-height', '');
+
+			// Find tallest
+			boxes.each(function() {
+				var h = $(this).outerHeight();
+				if (h > tallest) tallest = h;
+			});
+
+			// Apply height
+			boxes.css('min-height', tallest + 'px');
+		});
+	}
+
+	// Run on page load
+	equalizeItemBoxHeights();
+
+	// Run on resize
+	$(window).on('resize', function() {
+		equalizeItemBoxHeights();
+	});
+
 }( jQuery ) );
