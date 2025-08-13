@@ -2,7 +2,7 @@
 	$footer_logo = get_field('footer_logo','option');
 	$address = get_field('address','option');
 	$phone_number = get_field('phone_number','option');
-	$fax_number = get_field('fax_number','option');
+	$abn_number = get_field('abn_number','option');
 	$linkedin = get_field('linkedin','option');
 	$privacy_link = get_field('privacy_link','option');
 	$quality_link = get_field('quality_link','option');
@@ -17,9 +17,17 @@
 				</div>
 				<div class="footer-details">
 					<h6><?php bloginfo('name'); ?></h6>
-					<p><?php echo $address; ?></p>
-					<p><b>Phone:</b> <?php echo $phone_number; ?></p>
-					<p><b>Fax:</b> <?php echo $fax_number; ?></p>
+					<?php if($address): ?>
+						<p><?php echo $address; ?></p>
+					<?php endif; ?>
+					
+					<?php if($phone_number): ?>
+						<p><b>Phone:</b> <?php echo $phone_number; ?></p>
+					<?php endif; ?>
+
+					<?php if($abn_number): ?>
+						<p><b>ABN:</b> <?php echo $abn_number; ?></p>
+					<?php endif; ?>
 				</div>
 				<div class="footer-nav">
 					<?php
