@@ -20,7 +20,7 @@
 }
 
 .button-list .button {
-	margin-right: 10px;
+	margin: 0 10px 10px 0;
 }
 
 .button-list .button:last-child {
