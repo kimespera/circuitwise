@@ -31,13 +31,13 @@
 			<?php if ($button_list) : ?>
 				<ul class="button-list">
 					<?php foreach( $button_list as $row ):
-						$button = $row['button']; ?>
-						<?php if( $button ): 
-							$button_url = $button['url'];
-							$button_title = $button['title'];
-							$button_target = $button['target'] ? $button['target'] : '_self'; ?>
+						$buttonList = $row['button']; ?>
+						<?php if( $buttonList ): 
+							$buttonList_url = $buttonList['url'];
+							$buttonList_title = $buttonList['title'];
+							$buttonList_target = $buttonList['target'] ? $buttonList['target'] : '_self'; ?>
 							<li>
-								<a class="button btn-white" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+								<a class="button btn-white" href="<?php echo esc_url( $buttonList_url ); ?>" target="<?php echo esc_attr( $buttonList_target ); ?>"><?php echo esc_html( $buttonList_title ); ?></a>
 							</li>
 						<?php endif; ?>
 					<?php endforeach; ?>
