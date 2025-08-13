@@ -4,6 +4,7 @@
 	$image_type = get_field('image_type');
 	$image = get_field('image');
 	$content = get_field('content');
+	$button_list = get_field('button_list');
 	$button = get_field('button');
 
 	$anchor_id = $block['anchor'] ?? '';
@@ -27,6 +28,21 @@
 	<div class="container splitcontent-box">
 		<div class="split-col cont-col">
 			<div class="wysiwyg-box"><?php echo $content; ?></div>
+			<?php if ($button_list) : ?>
+				<ul class="button-list">
+					<?php foreach( $button_list as $row ):
+						$button = $row['button']; ?>
+						<?php if( $button ): 
+							$button_url = $button['url'];
+							$button_title = $button['title'];
+							$button_target = $button['target'] ? $button['target'] : '_self'; ?>
+							<li>
+								<a class="button btn-white" href="<?php echo esc_url( $button_url ); ?>" target="<?php echo esc_attr( $button_target ); ?>"><?php echo esc_html( $button_title ); ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
 			<?php if( $button ): 
 				$button_url = $button['url'];
 				$button_title = $button['title'];

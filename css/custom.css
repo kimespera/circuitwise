@@ -39,6 +39,19 @@ input.button:hover {
 	color: #E02335;
 }
 
+.button.btn-white {
+	background-color: #fff;
+	border-radius: 5px;
+	color: #22292E;
+	padding: 8px 12px;
+	text-transform: none;
+}
+
+.button.btn-white:hover {
+	background-color: #E02335;
+	color: #fff;
+}
+
 a.btn-link {
 	display: inline-block;
 	font-family: 'Inter Bold';

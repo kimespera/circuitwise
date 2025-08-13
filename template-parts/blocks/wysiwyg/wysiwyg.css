@@ -10,3 +10,19 @@
 .wysiwyg-block.dark * {
 	color: #fff;
 }
+
+.wysiwyg-block.dark .button.btn-white {
+	color: #22292E;
+}
+
+.wysiwyg-block.dark .button.btn-white:hover {
+	color: #fff;
+}
+
+.button-list .button {
+	margin-right: 10px;
+}
+
+.button-list .button:last-child {
+	margin: 0;
+}
