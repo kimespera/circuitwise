@@ -102,20 +102,50 @@
 		}
 	});
 
-	const items = $('.resource-item');
+	const $items = $('.resource-item');
 	const itemsPerLoad = 3;
 	let currentVisible = 9;
+	const threshold = 900;       // start loading when you're within 600px of the bottom
+	let loading = false;
+	let debounce;
 
-	// Initially hide all and show the first set
-	items.hide().slice(0, currentVisible).show();
+	// init
+	$items.hide().slice(0, currentVisible).show();
 
-	$(window).on('scroll', function() {
-		if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
-			// Load next batch
-			currentVisible += itemsPerLoad;
-			items.slice(0, currentVisible).fadeIn();
+	function revealNext() {
+		if (loading) return;
+		if (currentVisible >= $items.length) {
+		// all shown; stop listening
+		$(window).off('scroll.infinite resize.infinite');
+			return;
 		}
-	});
+		loading = true;
+
+		const nextVisible = Math.min(currentVisible + itemsPerLoad, $items.length);
+		$items.slice(currentVisible, nextVisible).fadeIn(180);
+		currentVisible = nextVisible;
+
+		loading = false;
+	}
+
+	function nearBottom() {
+		return $(window).scrollTop() + $(window).height() >= $(document).height() - threshold;
+	}
+
+	function onScroll() {
+		clearTimeout(debounce);
+		debounce = setTimeout(function () {
+		if (nearBottom()) revealNext();
+		// If content still doesn't fill viewport, keep loading until it does or we run out
+		while ($(document).height() <= $(window).height() + threshold && currentVisible < $items.length) {
+			revealNext();
+		}
+		}, 80);
+	}
+
+	// bind + run once
+	$(window).on('scroll.infinite resize.infinite', onScroll);
+	onScroll(); // prime load in case page starts short
 
 	function equalizeItemBoxHeights() {
 		$('#timeline-list .timeline-item').each(function() {
