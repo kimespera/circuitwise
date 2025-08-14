@@ -230,7 +230,11 @@ a.btn-link:hover {
 	padding: 10px;
 }
 
-.slicknav_nav li.current-menu-item a {
+.slicknav_nav li.current-menu-item > a {
+	color: #E02335;
+}
+
+.slicknav_nav li.current-menu-item.slicknav_parent > a > a {
 	color: #E02335;
 }
 
