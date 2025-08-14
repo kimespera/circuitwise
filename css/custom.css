@@ -130,7 +130,7 @@ a.btn-link:hover {
 }
 
 .main-menu a:hover,
-.main-menu li.current-menu-item a {
+.main-menu li.current-menu-item > a {
 	color: #E02335;
 }
 
