@@ -57,6 +57,28 @@
 		]
 	});
 
+	const $certs = $('.singlecol .cert-imgs');
+	$certs.slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		nextArrow: '<span class="nextArrow"><i class="fa-solid fa-chevron-right"></i></span>',
+		prevArrow: '<span class="prevArrow"><i class="fa-solid fa-chevron-left"></i></span>',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+		]
+	});
+
 	$('#timeline-list').slick({
 		infinite: false,
 		slidesToShow: 6,

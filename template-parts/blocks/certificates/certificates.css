@@ -21,6 +21,12 @@
 	min-width: 0;
 }
 
+.singlecol .cert-img {
+	box-shadow: none;
+	display: flex;
+	justify-content: center;
+}
+
 .certificates-block.twocols .cert-box {
 	align-items: center;
 	display: flex;
