@@ -34,9 +34,9 @@ input.button {
 
 a.button:hover,
 input.button:hover {
-	background-color: #fff;
-	border: 1px solid #E02335;;
-	color: #E02335;
+	background-color: #6C7888;
+	border: 1px solid #6C7888;;
+	color: #fff;
 }
 
 .button.btn-white {
