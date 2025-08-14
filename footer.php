@@ -22,11 +22,11 @@
 					<?php endif; ?>
 					
 					<?php if($phone_number): ?>
-						<p><b>Phone:</b> <?php echo $phone_number; ?></p>
+						<p class="phone-num"><b>Phone:</b> <?php echo $phone_number; ?></p>
 					<?php endif; ?>
 
 					<?php if($abn_number): ?>
-						<p><b>ABN:</b> <?php echo $abn_number; ?></p>
+						<p class="abn-num"><b>ABN:</b> <?php echo $abn_number; ?></p>
 					<?php endif; ?>
 				</div>
 				<div class="footer-nav">

@@ -294,6 +294,10 @@ a.btn-link:hover {
 	text-decoration: none;
 }
 
+.footer-details a.abn-num  {
+	pointer-events: none;
+}
+
 .footer-logo {
 	margin-bottom: 30px;
 }
