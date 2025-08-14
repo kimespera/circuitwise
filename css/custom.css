@@ -291,6 +291,7 @@ a.btn-link:hover {
 
 .footer-details a {
 	color: #fff;
+	text-decoration: none;
 }
 
 .footer-logo {
