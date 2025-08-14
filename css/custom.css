@@ -289,6 +289,10 @@ a.btn-link:hover {
 	width: 100%;
 }
 
+.footer-details a {
+	color: #fff;
+}
+
 .footer-logo {
 	margin-bottom: 30px;
 }
