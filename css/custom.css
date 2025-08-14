@@ -161,6 +161,7 @@ a.btn-link:hover {
 	padding: 20px 0;
 	position: absolute;
 	top: 100%;
+	width: 240px;
 }
 
 .main-menu li > ul li {
