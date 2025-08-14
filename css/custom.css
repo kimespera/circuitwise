@@ -171,6 +171,7 @@ a.btn-link:hover {
 .main-menu li > ul li a {
 	display: block;
 	padding: 10px 20px;
+	text-transform: none;
 }
 
 .main-menu li:hover > ul {
