@@ -136,7 +136,7 @@ a.btn-link:hover {
 	background-color: #E02335;
 	border: 1px solid #E02335;
 	border-radius: 100px;
-	color: #fff;
+	color: #fff !important;
 	padding: 10px 30px;
 }
 
@@ -236,11 +236,7 @@ a.btn-link:hover {
 }
 
 .slicknav_nav > li.current-menu-item > a,
-.slicknav_nav > li.current-menu-parent > a {
-	color: #E02335;
-}
-
-.slicknav_nav li.current-menu-item.slicknav_parent > a > a {
+.slicknav_nav > li.current-menu-parent > a > a {
 	color: #E02335;
 }
 
