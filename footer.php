@@ -22,7 +22,7 @@
 					<?php endif; ?>
 					
 					<?php if($phone_number): ?>
-						<p class="phone-num"><b>Phone:</b> <a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></p>
+						<p class="phone-num"><b>Phone:</b> <a href="tel:<?php echo str_replace(' ', '', $phone_number); ?>"><?php echo $phone_number; ?></a></p>
 					<?php endif; ?>
 
 					<?php if($abn_number): ?>
