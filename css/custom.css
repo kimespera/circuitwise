@@ -271,6 +271,12 @@ a.btn-link:hover {
 	transform-origin: 0 8px;
 }
 
+.slicknav_nav a:hover {
+	background-color: transparent;
+	border-radius: 0;
+	color: #fff;
+}
+
 .footer {
 	background-color: #22292E;
 	color: #fff;
