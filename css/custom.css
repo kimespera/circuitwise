@@ -306,10 +306,6 @@ a.btn-link:hover {
 	text-decoration: none;
 }
 
-.footer-details p.abn-num a  {
-	pointer-events: none;
-}
-
 .footer-logo {
 	margin-bottom: 30px;
 }

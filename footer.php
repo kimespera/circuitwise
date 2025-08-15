@@ -22,7 +22,7 @@
 					<?php endif; ?>
 					
 					<?php if($phone_number): ?>
-						<p class="phone-num"><b>Phone:</b> <?php echo $phone_number; ?></p>
+						<p class="phone-num"><b>Phone:</b> <a href="tel:<?php echo $phone_number; ?>"><?php echo $phone_number; ?></a></p>
 					<?php endif; ?>
 
 					<?php if($abn_number): ?>
@@ -68,6 +68,10 @@
 </div>
 
 <?php wp_footer(); ?>
-
+<!-- 
+  Developed by Kim Espera
+  Portfolio: https://kimespera.com/
+  Date: August 1, 2025
+-->
 </body>
 </html>
