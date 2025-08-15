@@ -19,19 +19,17 @@
 		if ($featured_query->have_posts()) : ?>
 			<div class="resources-featured">
 				<?php while ($featured_query->have_posts()) : $featured_query->the_post(); ?>
-					<div class="featured-col featured-desc"><?php echo get_the_excerpt(); ?></div>
+					<div class="featured-col featured-desc">
+						<h2><?php the_title(); ?></h2>
+						<p><?php echo get_the_excerpt(); ?></p>
+						<a class="btn-link" href="<?php the_permalink(); ?>">Read More<i class="fa-solid fa-chevron-right"></i></a>
+					</div>
 					<div class="featured-col featured-img">
-						<div class="featured-imgwrap">
-							<?php if (has_post_thumbnail()) : ?>
-								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
-							<?php else : ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/img/image-placeholder.jpg" alt="Placeholder">
-							<?php endif; ?>
-						</div>
-						<div class="featured-link">
-							<h4>Featured article</h4>
-							<a class="btn-link" href="<?php the_permalink(); ?>">Read More<i class="fa-solid fa-chevron-right"></i></a>
-						</div>
+						<?php if (has_post_thumbnail()) : ?>
+							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+						<?php else : ?>
+							<img src="<?php echo get_template_directory_uri(); ?>/img/image-placeholder.jpg" alt="Placeholder">
+						<?php endif; ?>
 					</div>
 				<?php endwhile; ?>
 			</div>
