@@ -18,6 +18,10 @@
 	position: relative;
 }
 
+.card-item:last-child {
+	margin-bottom: 0;
+}
+
 .card-img {
 	border-radius: 5px;
 	height: 382px;

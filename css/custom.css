@@ -130,16 +130,23 @@ a.btn-link:hover {
 }
 
 .main-menu a:hover,
-.main-menu li.current-menu-item > a {
+.main-menu > li.current-menu-item > a,
+.main-menu > li.current-menu-parent > a {
 	color: #E02335;
 }
 
+.slicknav_nav li.menu-btn a,
 .main-menu li.menu-btn a {
 	background-color: #E02335;
 	border: 1px solid #E02335;
 	border-radius: 100px;
 	color: #fff;
 	padding: 10px 30px;
+}
+
+.slicknav_nav li.menu-btn a {
+	display: inline-block;
+	margin: 10px 10px 20px;
 }
 
 .main-menu li.menu-btn a:hover {

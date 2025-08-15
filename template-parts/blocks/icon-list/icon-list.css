@@ -38,6 +38,18 @@
 	padding: 30px 50px;
 }
 
+.half-col ul li {
+	margin-bottom: 8px;
+}
+
+.half-col ul li:last-child {
+	margin-bottom: 0;
+}
+
+.half-col ul li > ul {
+	margin-top: 8px;
+}
+
 .iconlist-block.dark .button:hover {
 	color: #E02335;
 }
