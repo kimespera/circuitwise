@@ -205,4 +205,23 @@
 		}
 	});
 
+	function checkVisibility() {
+		$('h2').each(function() {
+			let top = $(this).offset().top;
+			let bottom = top + $(this).outerHeight();
+			let viewTop = $(window).scrollTop();
+			let viewBottom = viewTop + $(window).height();
+
+			if (bottom > viewTop && top < viewBottom) {
+				$(this).addClass('visible'); // show when in view
+			} else {
+				$(this).removeClass('visible'); // hide when out of view
+			}
+		});
+	}
+
+	// Run on load + scroll
+	checkVisibility();
+	$(window).on('scroll resize', checkVisibility);
+
 }( jQuery ) );

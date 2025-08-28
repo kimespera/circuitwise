@@ -438,6 +438,14 @@ h1 {
 
 h2 {
 	font-size: 34px;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.6s ease-out;
+}
+
+h2.visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 h3 {
@@ -692,7 +700,11 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-
+:root { --header-h: 120px; }
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: var(--header-h);
+}
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/

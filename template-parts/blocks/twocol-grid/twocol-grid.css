@@ -23,6 +23,11 @@
 	overflow: hidden;
 	padding: 40px 60px 40px 30px;
 	position: relative;
+	transition: all ease .3s;
+}
+
+.grid-item:hover {
+	background-color: #006f91;
 }
 
 .grid-content * {
