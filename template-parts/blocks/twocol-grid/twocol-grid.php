@@ -28,15 +28,15 @@
 					$button_title = $link['title'];
 					$button_target = $link['target'] ? $link['target'] : '_self'; ?>
 
-					<div class="grid-item">
+					<a class="grid-item" href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>">
 						<?php echo wp_get_attachment_image( $icon, 'full' ); ?>
 						
-						<div class="grid-content"><?php echo $content; ?></div>
+						<span class="grid-content"><?php echo $content; ?></span>
 
 						<?php if ($link) : ?>
-							<a class="btn-link" href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>"><?php echo $button_title; ?><i class="fa-solid fa-chevron-right"></i></a>
+							<span class="btn-link" href="<?php echo $button_url; ?>" target="<?php echo $button_target; ?>"><?php echo $button_title; ?><i class="fa-solid fa-chevron-right"></i></span>
 						<?php endif; ?>
-					</div>
+					</a>
 
 				<?php endforeach; ?>
 			</div>

@@ -62,6 +62,7 @@ a.btn-link {
 	text-transform: uppercase;
 }
 
+.btn-link i,
 a.btn-link i {
 	color: #E02335;
 }
